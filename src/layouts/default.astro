@@ -347,18 +347,20 @@ const props = Astro.props;
     ul {
       font-family: "Manrope";
       font-weight: 600;
-      color: white;
+      color: var(--text);
       display: flex;
-      gap: 1rem;
     }
 
     li {
-      background-color: var(--text);
-      padding: 0.25rem 0.5rem;
-      border-radius: 8px;
       transition:
         background-color 0.1s,
         color 0.1s;
+
+      a {
+        display: grid;
+        height: 100%;
+        padding: 1rem;
+      }
     }
 
     li:hover {
@@ -432,7 +434,28 @@ const props = Astro.props;
 
   @media screen and (min-width: 810px) {
     header {
-      padding: 1rem var(--global-side-padding-desktop);
+      max-height: 60px;
+      height: 100vh;
+      padding: 0 var(--global-side-padding-desktop);
+
+      nav {
+        height: 100%;
+      }
+
+      .nav-links-desktop {
+        height: 100%;
+      }
+
+      ul {
+        height: 100%;
+      }
+
+      li {
+        a {
+          padding: 0rem 2rem;
+          place-items: center;
+        }
+      }
     }
 
     .content {
