@@ -168,12 +168,24 @@ const props = Astro.props;
 
 <style is:global>
   :root {
+    /* Colors */
     --text: hsla(0, 0%, 4%, 1);
     --background: hsla(150, 100%, 91%, 1);
     --secondary: hsla(83, 9%, 29%, 1);
     --primary: hsla(168, 26%, 69%, 1);
     --accent: hsla(184, 57%, 72%, 1);
 
+    /* Mobile Font Sizes */
+    --title-mobile: 24px;
+    --body-mobile: 14px;
+    --subtitle-mobile: 14px;
+
+    /* Desktop Font Sizes */
+    --title-desktop: 45px;
+    --body-desktop: 16px;
+    --subtitle-desktop: 16px;
+
+    /* Padding */
     --global-side-padding-desktop: 4rem;
     --global-side-padding-mobile: 1rem;
   }
@@ -262,9 +274,6 @@ const props = Astro.props;
     margin: 0;
     padding: 0;
     border: 0;
-    font-size: 100%;
-    font-family: "Domine";
-    font: inherit;
     vertical-align: baseline;
   }
   /* HTML5 display-role reset for older browsers */
@@ -395,6 +404,7 @@ const props = Astro.props;
   }
 
   footer {
+    font-size: var(--subtitle-mobile);
     display: grid;
     gap: 2rem;
     background-color: var(--background);
@@ -423,10 +433,9 @@ const props = Astro.props;
 
     li {
       padding: 0.5rem 0.25rem;
-    }
-
-    li:hover {
-      text-decoration: underline;
+      & > a:hover {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -471,6 +480,7 @@ const props = Astro.props;
     }
 
     footer {
+      font-size: var(--subtitle-desktop);
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: 1fr 2fr;
       padding: 2rem var(--global-side-padding-desktop) 4rem

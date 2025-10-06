@@ -17,7 +17,7 @@
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: var(--title-mobile);
     font-family: "Manrope";
     font-weight: 800;
     color: var(--accent);
@@ -27,6 +27,7 @@
   .album-scroller {
     display: flex;
     gap: 1rem;
+    padding: 0 0 0.5rem 0;
     overflow-x: scroll;
     overflow-y: hidden;
 
@@ -47,5 +48,11 @@
   .album-scroller::-webkit-scrollbar-thumb {
     background: var(--accent);
     border-radius: 4px;
+  }
+
+  @media screen and (min-width: 810px) {
+    h1 {
+      font-size: var(--title-desktop);
+    }
   }
 </style>
