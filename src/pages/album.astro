@@ -2,6 +2,7 @@
 import Layout from "../layouts/default.astro";
 import CoverImage from "../images/cover_1.jpg";
 import TrackListItem from "../components/TrackListItem.astro";
+import TrackList from "../components/TrackList.astro";
 ---
 
 <Layout>
@@ -19,16 +20,7 @@ import TrackListItem from "../components/TrackListItem.astro";
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed...
       </p>
     </div>
-    <div class="tracklist">
-      <ul class="blogs">
-        <TrackListItem />
-        <TrackListItem />
-        <TrackListItem />
-        <TrackListItem />
-        <TrackListItem />
-        <TrackListItem />
-      </ul>
-    </div>
+    <TrackList />
   </div>
 </Layout>
 
@@ -80,15 +72,6 @@ import TrackListItem from "../components/TrackListItem.astro";
     }
   }
 
-  .tracklist {
-    place-items: center;
-  }
-
-  .blogs {
-    width: 100%;
-    display: grid;
-    gap: 2rem;
-  }
   @media screen and (min-width: 810px) {
     .container {
       grid-template-rows: 1fr;
@@ -99,10 +82,6 @@ import TrackListItem from "../components/TrackListItem.astro";
 
     .title {
       font-size: var(--title-medium-desktop);
-    }
-
-    .blogs {
-      gap: 4rem;
     }
   }
 </style>

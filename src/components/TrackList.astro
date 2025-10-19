@@ -1,0 +1,30 @@
+---
+import TrackListItem from "./TrackListItem.astro";
+---
+
+<div class="tracklist">
+  <ul class="blogs">
+    <TrackListItem />
+    <TrackListItem />
+    <TrackListItem />
+    <TrackListItem />
+    <TrackListItem />
+    <TrackListItem />
+  </ul>
+</div>
+<style>
+  .tracklist {
+    place-items: center;
+  }
+  .blogs {
+    width: 100%;
+    display: grid;
+    gap: 2rem;
+  }
+
+  @media screen and (min-width: 810px) {
+    .blogs {
+      gap: 4rem;
+    }
+  }
+</style>
