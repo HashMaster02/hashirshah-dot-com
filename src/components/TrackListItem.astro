@@ -1,11 +1,10 @@
 ---
-
+const { title, runtime } = Astro.props;
 ---
 
 <li>
-  <a href="#"><p class="blog-title">Productivity in the Knowledge Economy</p></a
-  >
-  <time datetime="PT3M5S">3:05</time>
+  <a href="#"><p class="blog-title">{title}</p></a>
+  <time datetime="PT3M5S">{runtime}</time>
 </li>
 
 <style>
