@@ -2,35 +2,23 @@
 import Layout from "../layouts/default.astro";
 import Album from "../components/Album.astro";
 import AlbumShelf from "../components/AlbumShelf.astro";
+import { albums } from "../data/album-data";
 ---
 
 <Layout>
   <AlbumShelf>
-    <Album
-      albumTitle="Learners Tooklkit Deluxe Edition"
-      href="learners-toolkit-deluxe"
-    />
-    <Album
-      albumTitle="Learners Tooklkit Deluxe Edition"
-      href="learners-toolkit-deluxe"
-    />
-    <Album
-      albumTitle="Learners Tooklkit Deluxe Edition"
-      href="learners-toolkit-deluxe"
-    />
-  </AlbumShelf>
-  <AlbumShelf>
-    <Album
-      albumTitle="Learners Tooklkit Deluxe Edition"
-      href="learners-toolkit-deluxe"
-    />
-    <Album
-      albumTitle="Learners Tooklkit Deluxe Edition"
-      href="learners-toolkit-deluxe"
-    />
-    <Album
-      albumTitle="Learners Tooklkit Deluxe Edition"
-      href="learners-toolkit-deluxe"
-    />
+    {
+      albums.map((album) => {
+        return (
+          <Album
+            albumTitle={album.title}
+            cover={album.cover}
+            year={album.year}
+            type={album.type}
+            href={album.slug}
+          />
+        );
+      })
+    }
   </AlbumShelf>
 </Layout>
