@@ -1,4 +1,4 @@
-let isVisible = true;
+let isVisible = false;
 const upNextMenuButton = document.getElementById("up-next-menu-button");
 const upNextMenu = document.querySelector(".up-next");
 
