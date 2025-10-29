@@ -1,9 +1,9 @@
 ---
-const { title, runtime } = Astro.props;
+const { title, runtime, href } = Astro.props;
 ---
 
 <li>
-  <a href="#"><p class="blog-title">{title}</p></a>
+  <a href={href}><p class="blog-title">{title}</p></a>
   <time datetime="PT3M5S">{runtime}</time>
 </li>
 
