@@ -35,7 +35,7 @@ const { Content } = await post.render();
       <div class="divider"></div>
       <Content />
     </div>
-    <div class="up-next">
+    <div class="up-next collapse">
       <svg
         id="up-next-menu-button"
         xmlns="http://www.w3.org/2000/svg"
@@ -105,6 +105,7 @@ const { Content } = await post.render();
       margin-right: 1rem;
       transform: rotate(-90deg);
       cursor: pointer;
+      align-self: center;
 
       &:hover {
         color: var(--accent);
@@ -148,7 +149,8 @@ const { Content } = await post.render();
     .up-next {
       position: relative;
       box-shadow: none;
-      min-width: 30%;
+      border-left: 2px solid var(--accent);
+      width: 30%;
 
       div {
         grid-column: 2 / 3;
