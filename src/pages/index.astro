@@ -3,10 +3,11 @@ import Layout from "../layouts/default.astro";
 import Album from "../components/Album.astro";
 import AlbumShelf from "../components/AlbumShelf.astro";
 import { albums } from "../data/album-data";
+import SinglesList from "../components/SinglesList.astro";
 ---
 
 <Layout>
-  <AlbumShelf>
+  <AlbumShelf title="Albums">
     {
       albums.map((album) => {
         return (
@@ -20,5 +21,8 @@ import { albums } from "../data/album-data";
         );
       })
     }
+  </AlbumShelf>
+  <AlbumShelf title="Featured Singles">
+    <SinglesList showFeatured={true} />
   </AlbumShelf>
 </Layout>
