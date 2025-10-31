@@ -1,0 +1,124 @@
+---
+import Layout from "../layouts/default.astro";
+---
+
+<Layout>
+  <div class="container">
+    <h1>About</h1>
+    <p>
+      Hi, welcome to my blog. My name is Hashir. I'm a Master's student studying
+      AI at Illinois Tech, Chicago. I was born in England and am originally
+      Pakistani.
+    </p>
+    <p>
+      I wasn't the best student when I began high school, so I decided to
+      improve my grades. I got into reading non-fiction books such as Deep Work
+      by Cal Newport, The Productivity Project by Chris Bailey, and A Mind for
+      Numbers by Barbara Oakley. I honed my skill of self studying and began
+      slowly branching out into other subjects. Nowadays, I read books from all
+      sorts of domains including politics, philosophy, science, and biographies.
+      And I intend to stay on this trajectory.
+    </p>
+    <p>
+      Reading gave me an itch to try writing. I created a blog called Learner's
+      Loft in 2022 where I wrote about productivity because that's what I was
+      most familiar with. When I branched out into other genres, I they didn't
+      fit my blog's theme. Most blogs have a niche. They're usually about a
+      person, a domain, or a subdomain. I did not want to be governed by that.
+    </p>
+    <p>
+      I began toying with the idea of writing albums. <strong>
+        Musicians produce albums with different themes, allowing them to
+        organize their work. I found that order comforting, so I built this site
+        that follows that philosophy. That's why it resembles a platform for
+        streaming music. Each album consists of a set of blogs that follow a
+        theme. The theme relates to what I am learning about at that time.
+        Therefore, this blog serves as my discography of knowledge.</strong
+      > I hope you enjoy.
+    </p>
+
+    <h1>Authors the Inspire Me</h1>
+    <p>
+      Below are some of the authors that inspire me along with my favorite book
+      they've written.
+    </p>
+    <ul>
+      <li>
+        William Zinsser (<a
+          href="https://www.goodreads.com/book/show/53343.On_Writing_Well"
+          >On Writing Well</a
+        >)
+      </li>
+      <li>
+        Ryan Holiday (<a
+          href="https://www.goodreads.com/book/show/27036528-ego-is-the-enemy"
+          >Ego is the Enemy</a
+        >)
+      </li>
+      <li>
+        Austin Kleon (<a
+          href="https://www.goodreads.com/book/show/18290401-show-your-work"
+          >Show Your Work</a
+        >)
+      </li>
+      <li>
+        Cal Newport (<a
+          href="https://www.goodreads.com/book/show/25744928-deep-work"
+          >Deep Work</a
+        >)
+      </li>
+      <li>
+        Tara Westover (<a
+          href="https://www.goodreads.com/book/show/35133922-educated"
+          >Educated</a
+        >)
+      </li>
+    </ul>
+  </div>
+</Layout>
+
+<style>
+  .container {
+    place-self: center;
+    font-size: var(--body-mobile);
+    font-family: "Domine";
+    max-width: 70ch;
+    color: var(--text);
+    line-height: 1.5;
+    letter-spacing: 0.25px;
+
+    h1 {
+      font-size: var(--title-mobile);
+    }
+
+    strong {
+      font-weight: 900;
+    }
+
+    p,
+    ul,
+    li {
+      all: revert;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      font-style: italic;
+
+      &:hover {
+        color: var(--accent);
+      }
+    }
+  }
+
+  @media screen and (min-width: 810px) {
+    .container {
+      font-size: var(--body-desktop);
+
+      h1 {
+        font-size: var(--title-desktop);
+      }
+    }
+  }
+</style>
