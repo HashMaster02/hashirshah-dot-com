@@ -2,7 +2,7 @@ let isVisible = false;
 const upNextMenuButton = document.getElementById("up-next-menu-button");
 const upNextMenu = document.querySelector(".up-next");
 
-upNextMenuButton.addEventListener("click", toggleMenu);
+upNextMenu.addEventListener("click", toggleMenu);
 
 function toggleMenu() {
   if (isVisible) {
