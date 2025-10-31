@@ -3,6 +3,7 @@ import Layout from "../../layouts/default.astro";
 import { getCollection } from "astro:content";
 import "../../stylesheets/blog-md.css"; // using imported stylesheet for <Content> element compatibility
 import TrackList from "../../components/TrackList.astro";
+import { parseTime, formatTime } from "../../utils/format-timestamps";
 
 export async function getStaticPaths() {
   const allPosts = await getCollection("blog");
@@ -40,6 +41,9 @@ const { Content } = await post.render();
     </a>
     <div class="blog">
       <h1 class="title">{post.data.title}</h1>
+      <small>
+        <p>{formatTime(parseTime(post.data.runtime))}</p>
+      </small>
       <div class="divider"></div>
       <Content />
     </div>
