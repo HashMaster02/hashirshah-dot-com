@@ -25,13 +25,13 @@ Choosing the right projects to work on will let you avoid the second kind of fai
 
 I’m sure you’ve heard the saying “step outside your comfort zone” at least once in your life (though I’d be willing to bet it’s far more than once). Though I agree with it, I think it’s incomplete and a little misleading. Let’s take a look at the diagram below so I can explain further:
 
-![Alt text](/public/Skill_Circle.png)
+![Alt text](/blog/learners-toolkit/Skill_Circle.png)
 
 Here, we have 2 circles: We have the green circle that represents your “Comfort Zone”. This is where we all like to stay as it feels familiar and safe. You’ll notice we also have a blue circle that represents your current “Skill Zone” or “Skill Level”. This is the circle that no one talks about.
 
 What is your Skill Level? Think of your skill level as defining your abilities and what you’re ‘capable’ of doing. It houses all the knowledge you’ve acquired about a specific topic, including those things you’ve practiced and mastered (held inside your comfort zone), but also those that you haven’t yet put into action i.e., things that you _know_ about, but haven’t yet practiced. Your skill level is what allows you to gauge whether or not you’re ready to tackle something. Think of it this way, as someone who has never started a business in their life, being a CEO would be far outside of your skill level.
 
-![Alt text](/public/Skill_Circle_2.png)
+![Alt text](/blog/learners-toolkit/Skill_Circle_2.png)
 
 In order to grow your skill level, you need to spend some time learning and reading-up on new tools and techniques relating to whatever you’re trying to achieve. For example, let’s say you’re learning how to draw portraits. In order to expand your skill level, you may read books and watch videos about body proportions. Acquiring that knowledge now allows you to go and start practicing that particular technique, without being too lost or confused,  in order to solidify the concepts in your head.
 
@@ -39,7 +39,7 @@ Remember these basic rules: To grow your Skill Level, you must _learn about_ new
 
 When you choose a personal project, the project can land in one of the 3 main zones inside the Project Circle, each given a different color on the diagram below:
 
-![Alt text](/public/Skill_Circle_3.png)
+![Alt text](/blog/learners-toolkit/Skill_Circle_3.png)
 
 White: These projects will be easy to complete as you’re using tools and techniques that you’ve already mastered, but you won’t make significant progress towards your goal as you’re just repeating what you already know.
 
