@@ -30,6 +30,14 @@ const { Content } = await post.render();
 
 <Layout>
   <div class="container">
+    <a class="home-button" href=`/${Astro.params.albumslug}`>
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M19 7v4H5.83l3.58-3.59L8 6l-6 6l6 6l1.41-1.42L5.83 13H21V7z"
+        ></path></svg
+      >
+    </a>
     <div class="blog">
       <h1 class="title">{post.data.title}</h1>
       <div class="divider"></div>
@@ -39,8 +47,6 @@ const { Content } = await post.render();
       <svg
         id="up-next-menu-button"
         xmlns="http://www.w3.org/2000/svg"
-        width="42"
-        height="42"
         viewBox="0 0 24 24"
       >
         <path
@@ -58,6 +64,18 @@ const { Content } = await post.render();
 </Layout>
 
 <style>
+  .home-button {
+    width: 42px;
+    color: var(--secondary);
+    a {
+      color: inherit;
+    }
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
   .container {
     position: relative;
     display: flex;
@@ -82,10 +100,10 @@ const { Content } = await post.render();
     bottom: 0;
     left: 0%;
     width: 100%;
-    background-color: white;
+    background-color: var(--background);
     box-sizing: border-box;
     padding: var(--global-side-padding-mobile);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 1);
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 1);
 
     div {
       margin-top: 1.5rem;
@@ -93,6 +111,7 @@ const { Content } = await post.render();
     }
 
     & > p {
+      position: sticky;
       color: var(--secondary);
       font-size: var(--title-mobile);
       font-family: "Manrope";
@@ -101,6 +120,8 @@ const { Content } = await post.render();
     }
 
     & svg {
+      width: 42px;
+      position: sticky;
       color: var(--secondary);
       margin-right: 1rem;
       transform: rotate(-90deg);
@@ -134,6 +155,9 @@ const { Content } = await post.render();
   }
 
   @media screen and (min-width: 810px) {
+    .home-button {
+      width: 62px;
+    }
     .container {
       flex-direction: row;
       color: var(--text);
@@ -157,6 +181,7 @@ const { Content } = await post.render();
       }
 
       & svg {
+        width: 62px;
         transform: rotate(180deg);
       }
     }
