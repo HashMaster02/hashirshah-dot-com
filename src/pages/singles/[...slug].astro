@@ -1,0 +1,101 @@
+---
+import Layout from "../../layouts/default.astro";
+import { getCollection } from "astro:content";
+import "../../stylesheets/blog-md.css"; // using imported stylesheet for <Content> element compatibility
+import { parseTime, formatTime } from "../../utils/format-timestamps";
+
+export async function getStaticPaths() {
+  const blogPosts = await getCollection("singles");
+
+  return blogPosts.flatMap((post) => {
+    return [
+      {
+        params: { slug: post.slug },
+        props: { post },
+      },
+    ];
+  });
+}
+
+const { post } = Astro.props;
+const { Content } = await post.render();
+---
+
+<Layout>
+  <div class="container">
+    <a class="home-button" href="/singles">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path
+          fill="currentColor"
+          d="M19 7v4H5.83l3.58-3.59L8 6l-6 6l6 6l1.41-1.42L5.83 13H21V7z"
+        ></path></svg
+      >
+    </a>
+    <div class="blog">
+      <h1 class="title">{post.data.title}</h1>
+      <small>
+        <p>{formatTime(parseTime(post.data.runtime))} • {post.data.date}</p>
+      </small>
+      <div class="divider"></div>
+      <Content />
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .home-button {
+    width: 42px;
+    color: var(--secondary);
+    a {
+      color: inherit;
+    }
+
+    &:hover {
+      color: var(--accent);
+    }
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-size: var(--body-mobile);
+  }
+
+  .blog {
+    max-width: 70ch;
+    font-family: "Domine";
+    color: var(--text);
+    line-height: 1.5;
+    letter-spacing: 0.25px;
+  }
+
+  .title {
+    font-size: 2rem;
+    font-style: italic;
+  }
+
+  .divider {
+    width: 100%;
+    border: 1px solid var(--accent);
+    margin-bottom: 2rem;
+  }
+
+  @media screen and (min-width: 810px) {
+    .home-button {
+      width: 62px;
+    }
+    .container {
+      flex-direction: row;
+      color: var(--text);
+      font-size: var(--body-desktop);
+      grid-template-columns: 3fr 2fr;
+    }
+
+    .blog {
+      padding-bottom: 1rem;
+      margin: 0 auto;
+    }
+  }
+</style>
