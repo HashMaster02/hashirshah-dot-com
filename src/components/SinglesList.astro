@@ -1,8 +1,9 @@
 ---
 import { getCollection } from "astro:content";
 import { formatTime, parseTime } from "../utils/format-timestamps";
+import { sortDateAscending } from "../utils/sorting";
 
-let posts = await getCollection("singles");
+let posts = (await getCollection("singles")).sort(sortDateAscending);
 const { showFeatured } = Astro.props;
 
 if (showFeatured) {
