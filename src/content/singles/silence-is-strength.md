@@ -41,7 +41,7 @@ Be weary when you speak about your struggles. It can be healthy to vent, but you
 
 This is not purely philosophical. People who lean towards silence and are comfortable working in solitude can have more impact than the ones who don’t. Business psychology expert and therapist Peter Shallard illustrates this when writing about his experience attending South by South West. He met many aspiring entrepreneurs, all of whom spoke vividly about their next big idea. However, he noticed that the people who delivered results acted differently:
 
-> They play their cards close to their chest…Maybe they were just sick of having the same conversations over and over. Or maybe, they intuitively know that sharing their plans only creates mental faux-victories.
+> "They play their cards close to their chest…Maybe they were just sick of having the same conversations over and over. Or maybe, they intuitively know that sharing their plans only creates mental faux-victories."
 
 # A Personal Argument
 
